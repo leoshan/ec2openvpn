@@ -1,4 +1,19 @@
-OpenVPN Access Server
+OpenVPN Access Server AMI
 Sold by: OpenVPN Technologies, Inc.
 OpenVPN Access Server is a full featured SSL VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, and Linux OS environments. OpenVPN Access Server supports a wide range of configurations, including secure and granular remote access to internal network and/ or private cloud network resources and applications with fine-grained access control.
+
+Powerful web interface - OpenVPN Access Server features a powerful, easy to use web administration portal that allows you to get your VPN server up and running quickly without having to work with cumbersome configuration files.
+Automated certificate management - An automated PKI built-in to OpenVPN Access Server issues user certificates and keys automatically without requiring an existing PKI infrastructure, easing complicated setup procedures and reducing deployment timelines.
+Two factor capable - OpenVPN Access Server supports the following authentication methods to help you easily integrate your existing authentication services with your VPN server: Local DB, LDAP, Active Directory, RADIUS. Version 2 has built-in support for Google Authenticator two factor authentication, helping your organization comply with various regulatory compliance requirements.
+
+OpenVPN Access Server is a full featured SSL VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, and Linux OS environments. OpenVPN Access Server supports a wide range of configurations, including secure and granular remote access to internal network and/ or private cloud network resources and applications with fine-grained access control.
+
+
+https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amazon-ec2-appliance-ami-quick-start-guide/
+
+http://www.tek-t.com/2013/10/13/set-secure-vpn-free-using-aws-openvpn/
+
+https://docs.openvpn.net/how-to-tutorialsguides/administration/extending-vpn-connectivity-to-amazon-aws-vpc-using-aws-vpc-vpn-gateway-service/
+
+
 

@@ -12,7 +12,8 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
 2. 设置过程中的参数按照普通虚拟机建设即可，最后虚拟机启动后再配置参数（也可以在高级设置添加user-data，不推荐）。
 3. 安全组设置：TCP端口443、943；UDP端口1194.
 4. 选择分配静态IP、Public IP或者设置域名进行连接（当前使用public ip）
-5. 使用openvpnas账号和private key-pair，用putty登录虚拟机。登录成功后设置向导进行配置。
-如果需要再次运行此向导，使用sudo ovpn-init --ec2 命令。
+5. 使用openvpnas账号和private key-pair，用putty登录虚拟机。登录成功后参照OpenVPNAS-Setup-Wizard设置向导进行配置。
+    如果需要再次运行此向导，使用sudo ovpn-init --ec2 命令。
+6. 使用public IP在浏览器上登录openvpn access server Web Admin UI
 
 

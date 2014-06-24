@@ -21,7 +21,7 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
 8. 更新系统及软件：sudo apt-get update && sudo apt-get upgrade。
 
 客户端登陆
-＝＝＝＝＝＝＝＝＝＝＝＝＝
+===================
 Android 系统
 1，下载 openvpn for android APP 安装
 2，下载 ovpn配置文件：通过web端访问https://Public IP:443 下载profile文件

@@ -1,0 +1,37 @@
+Running the OpenVPN Access Server Setup Wizard (required, if no Amazon user-data was specified)。
+Read through the EULA, and enter yes to indicate your agreement.
+
+> Will this be the primary Access Server node?
+Explanation: If this is your initial Access Server node, press Enter to accept the default setting. Otherwise, if you are setting up your failover node, change this to say no.
+
+> Please specify the network interface and IP address to be used by the Admin Web UI:
+Explanation: This will be the interface where OpenVPN Access Server will listen to Admin Web UI requests. Make sure you have access to the interface listed otherwise you will be unable to login to your server. If you are uncertain on what interface to use, select option 1 for all interfaces. Do note that if your network did not assign your appliance a DHCP lease or if you are planning to use a static IP for your server, you will need to specify all interfaces here and follow the instructions for assigning a Static IP in the later section of this article. This option may be changed any time after the completion of the wizard in the Web Admin UI.
+
+> Please specify the port number for the Admin Web UI.
+Explanation: This is the port you will use to access to the web based administration area. It is usually safe to leave this at the default port unless customization is desired.
+
+> Please specify the TCP port number for the OpenVPN Daemon
+Explanation: This is the port clients will use to connect to your VPN server. This port will have to be forwarded to the Internet if your server is behind a NAT based router. By default the web based administration area also runs on this port for your convenience, although this setting can be disabled in the Admin Web UI interface.
+
+> Should client traffic be routed by default through the VPN?
+Explanation: If you only have a small network you would like your remote users to connect over the VPN, select no. Otherwise, if you would like everything to go through the VPN while the user is connected (especially useful if you want to secure data communications over an insecure link), select yes for this option.
+
+> Should client DNS traffic be routed by default through the VPN?
+Explanation: If you would like your VPN clients to able to resolve local domain names using an on-site DNS server, select yesfor this option. Otherwise, select no. Do note that if you selected yes for the previous option, all traffic will be routed over the VPN regardless what you set for this setting here.
+
+> Use local authentication via internal DB?
+Explanation: If you would like OpenVPN Access Server to keep an internal authentication database for authenticating your users, select yes for this option. When this option is turned on, you will be able to define and/or change username and passwords within the Admin Web UI. If you select no for this option, Linux PAM authentication will be used and you will need to add/change/delete users within the Linux operating system itself. If you would like to use LDAP or RADIUS as your authentication method, you will need to change this after you login to the Web Admin UI.
+
+> Should private subnets be accessible to clients by default?
+Explanation: This option defines the default security setting of your OpenVPN Access Server. When Should client traffic be routed by default through the VPN? is set to no, it defines the list of subnets that your VPN clients is able to access. You are able to add more entries to this list once you login to the Admin Web UI area. This option will have no effect if Should client traffic be routed by default through the VPN? is set to yes.
+
+> Do you wish to login to the Admin UI as "openvpn"?
+Explanation: This defines the initial username in which you would use to login to the Access Server Admin UI area. This username will also serve as your "lock out" administrator username shall you ever lock yourself out of your own server. If you would like to specify your own username, select no. Otherwise, accept yes for the default.
+> > Specify the username for an existing user or for the new user account:
+Explanation: Enter the initial username you would like to use instead of the default 'openvpn'.
+> Type the password for the 'user' account:
+> Confirm the password for the 'user' account:
+Explanation: Specify the password you would like to use for the account.
+
+> > Please specify your OpenVPN-AS license key (or leave blank to specify later):
+Explanation: If you have purchased a license key for your OpenVPN Access Server software, enter it here. Otherwise, leave it blank. OpenVPN Access Server includes two free licenses for testing purposes.

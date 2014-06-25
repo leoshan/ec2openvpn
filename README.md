@@ -32,7 +32,7 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
 ===================
 Android 系统
 1，下载 openvpn for android APP 安装
-2，下载 ovpn配置文件：通过web端访问https://Public IP:443 下载profile文件
+2，下载 ovpn配置文件：通过web端访问https://Public IP:443 使用user1账号下载profile文件
 3， 导入ovpn文件，简单设置，即可登陆（具体配置参数研究中）
 
 IOS系统

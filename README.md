@@ -20,6 +20,14 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
     Right click on the VPN instance, select Change Source/Dest. Check and make sure the status is Disabled.
 8. 更新系统及软件：sudo apt-get update && sudo apt-get upgrade。
 
+9. 添加VPN多账号登陆: 
+    1）使用root账号添加用户执行命令：
+         useradd user1 添加账号
+         passwd user1 设置密码
+    2）在Admin web UI上设置：
+         Authentication选择使用PAM验证，User Permissions页面添加user1的账号。
+
+
 客户端登陆
 ===================
 Android 系统

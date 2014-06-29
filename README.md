@@ -37,8 +37,14 @@ For visit twitter, deploy squid proxy server.
    squid3 -k parse
 4) verify squid service, see 3128 port is licening
    netstat -ntpl
-5) setup squid3 on boot
+5) setup squid3 on boot (Ubuntu is different)
+在/etc/rc.local 文件exit 0 之前的行上添加 service squid3 start
 
+Linux系统的启动调用过程如下：
+内核 -> /etc/init/rc-sysint.conf -> /etc/inittab -> etc/init.d/rc -> /etc/rc[0~6].d -> /etc/init.d/rc.local ->/etc/rc.local
+虽然在ubuntu后来的版本中默认已经没有了inittab文件，但可以自行添加。
+以上的启动过程，并不是代表所有，以Redhat系列的CentOS5为例：
+内核 -> /etc/inittab -> /etc/ rc.sysinit (/etc/rc.d/rc.sysinit) -> /etc/rc[?].d (/etc/rc.d/rc[?].d) -> /etc/rc.local(/etc/rc.d/rc.local)
 
 # 8. Set IP proxy on twitter App.
 IP: 172.32.x.x (The private ip of openvpn config)

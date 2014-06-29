@@ -27,6 +27,8 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
     2）在Admin web UI上设置：
          Authentication选择使用PAM验证，User Permissions页面添加user1的账号。
 
+安装Squid代理服务器
+
 
 客户端登陆
 ===================

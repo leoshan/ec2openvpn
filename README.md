@@ -34,15 +34,14 @@ For visit twitter, deploy squid proxy server.
 2) sudo vim /etc/squid3/squid.conf
    Modify http_access deny all TO http_access allow all
 3) Check parse is ok
-   squid -k parse
-4) initial cache
-   squid -z
-5) chkconfig squid on
-6) service squid start
-7) verify squid service, see 3128 port is licening
+   squid3 -k parse
+4) verify squid service, see 3128 port is licening
    netstat -ntpl
+5) setup squid3 on boot
+
+
 # 8. Set IP proxy on twitter App.
-IP: 192.168.240.1 (The localip of pptp vpn config, also is the gateway)
+IP: 172.32.x.x (The private ip of openvpn config)
 Port: 3128 (Don't use set the port in secret group)
 
 

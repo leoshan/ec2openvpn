@@ -28,6 +28,25 @@ To do as "https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amaz
          Authentication选择使用PAM验证，User Permissions页面添加user1的账号。
 
 安装Squid代理服务器
+====================
+For visit twitter, deploy squid proxy server. 
+1) sudo apt-get install squid
+2) sudo vim /etc/squid3/squid.conf
+   Modify http_access deny all TO http_access allow all
+3) Check parse is ok
+   squid -k parse
+4) initial cache
+   squid -z
+5) chkconfig squid on
+6) service squid start
+7) verify squid service, see 3128 port is licening
+   netstat -ntpl
+# 8. Set IP proxy on twitter App.
+IP: 192.168.240.1 (The localip of pptp vpn config, also is the gateway)
+Port: 3128 (Don't use set the port in secret group)
+
+
+
 
 
 客户端登陆

@@ -1,0 +1,22 @@
+Documentation
+
+After successful installation of the OpenVPN Access Server package you will be shown the following information in your terminal:
+
+
+The Access Server has been successfully installed in /usr/local/openvpn_as
+Configuration log file has been written to /usr/local/openvpn_as/init.log
+Please enter "passwd openvpn" to set the initial
+administrative password, then login as "openvpn" to continue
+configuration here: https://listeningip:943/admin
+To reconfigure manually, use the /usr/local/openvpn_as/bin/ovpn-init tool.
+Access Server web UIs are available here:
+Admin  UI: https://listeningip:943/admin
+Client UI: https://listeningip:943/
+
+You will need to run one more command before navigating to the OpenVPN Access Server Admin UI. You will need to set a password for the openvpn admin account, to do that you can run the following command in terminal:
+
+passwd openvpn
+
+After doing so you can navigate to the OpenVPN Access Server Admin UI. If you require a more advanced configuration you can go ahead and run the ovpn-init script:
+
+/usr/local/openvpn_as/bin/ovpn-init

@@ -3,7 +3,7 @@ admin_user=openvpn
 admin_pw=qwerty
 reroute_gw=1
 reroute_dns=1
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install mailutils -y
 #sudo passwd openvpn
 #qwerty

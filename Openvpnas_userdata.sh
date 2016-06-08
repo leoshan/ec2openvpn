@@ -5,11 +5,13 @@ reroute_gw=1
 reroute_dns=1
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install mailutils -y
-#sudo passwd openvpn
-#qwerty
-#qwerty
+
+(echo "password"; sleep 1; echo "password")|sudo passwd openvpn
+
 #PASSWORD=`openssl rand 8 -base64`
-sudo ovpn-init --ec2
+#echo -e "Password is $PASSWORD" > mima.txt
+# (echo $PASSWORD; sleep 1; echo $PASSWORD)|sudo passwd openvpn
+sudo ovpn-init --ec2 <<EOF
 yes
 yes
 2

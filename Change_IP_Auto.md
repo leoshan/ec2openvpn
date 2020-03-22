@@ -17,19 +17,26 @@ sudo /usr/local/openvpn_as/scripts/sacli start
 1. sudo vi /lib/systemd/system/rc.local.service
 
 在末尾添加 [Install] 字段，如下：
+
+
 [Install]  
 WantedBy=multi-user.target  
 Alias=rc-local.service
 
 2. 创建 rc.local脚本
+
+
 sudo vi /etc/rc.local
 增加上面的脚本：
+
+
 #!/bin/bash
 HOST=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
 sudo /usr/local/openvpn_as/scripts/sacli --key "host.name" --value $HOST ConfigPut
 sudo /usr/local/openvpn_as/scripts/sacli start
 sudo echo "Update IP $HOST sucess" > /home/openvpnas/ChangeIP.log
 
-sudo chmod a+x /etc/rc.local
 
-3. sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/
+3. sudo chmod a+x /etc/rc.local
+
+4. sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/

@@ -6,22 +6,22 @@
 2）在EC2主机重启的时候，直接更改Openvpn的Host FQDN，然后直接用client去下载登录文件就好。节省一步，在开机自动脚本中加入几行命令。
 
 ##
-1、获取AWS EC2实例的public IP地址
+1. 获取AWS EC2实例的public IP地址
 HOST=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
-2、使用openvpn命令设置IP地址，并更新服务
+2. 使用openvpn命令设置IP地址，并更新服务
 sudo /usr/local/openvpn_as/scripts/sacli --key "host.name" --value $HOST ConfigPut
 sudo /usr/local/openvpn_as/scripts/sacli start
 
 ##
 将上面三个命令制作开机启动脚本（https://zhuanlan.zhihu.com/p/98804785）
-1、sudo vi /lib/systemd/system/rc.local.service
+1. sudo vi /lib/systemd/system/rc.local.service
 
 在末尾添加 [Install] 字段，如下：
 [Install]  
 WantedBy=multi-user.target  
 Alias=rc-local.service
 
-2、创建 rc.local脚本
+2. 创建 rc.local脚本
 sudo vi /etc/rc.local
 增加上面的脚本：
 #!/bin/bash
@@ -32,4 +32,4 @@ sudo echo "Update IP $HOST sucess" > /home/openvpnas/ChangeIP.log
 
 sudo chmod a+x /etc/rc.local
 
-3、sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/
+3. sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/

@@ -1,8 +1,8 @@
 ## VM通过先stop再start后，自动化更换服务IP能力
     问题：最近FW的政策是检测到FQ行为后，将特定IP加入到某个池子中，然后在建立握手的时候，故意丢TLS特征包,
-    导致TLS加密失败服务器验证不成功，连接失败。
+         导致TLS加密失败服务器验证不成功，连接失败。
     解决办法：方式就是AWS 手机client，Stop主机再Start主机，自动更换一个随机IP，然后用新IP登录Openvpn的WebUI重新更新主机IP
-    然后重新连接Openvpn服务器下载新的Client profile。
+             然后重新连接Openvpn服务器下载新的Client profile。
     实施方案：
     1）虽然可以通过固定域名来解决，更改DNS映射关系，但是还是要多做一步，需要登录阿里云去维护我的DNS记录。
     2）在EC2主机重启的时候，直接更改Openvpn的Host FQDN，然后直接用client去下载登录文件就好。

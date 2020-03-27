@@ -16,20 +16,16 @@
 ## 开机自启动脚本制作
     将上面三个命令制作开机启动脚本（https://zhuanlan.zhihu.com/p/98804785）
     1. sudo vi /lib/systemd/system/rc.local.service
-
     在末尾添加 [Install] 字段，如下：
-
+    
     [Install]  
     WantedBy=multi-user.target  
     Alias=rc-local.service
 
     2. 创建 rc.local脚本
-
-
     sudo vi /etc/rc.local
     增加上面的脚本：
-
-
+    
     #!/bin/bash
     sleep 30
     HOST=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
@@ -37,7 +33,5 @@
     sudo /usr/local/openvpn_as/scripts/sacli start
     sudo echo "Update IP $HOST sucess" > /home/openvpnas/ChangeIP.log
 
-
     3. sudo chmod a+x /etc/rc.local
-
     4. sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/

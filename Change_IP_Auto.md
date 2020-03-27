@@ -31,7 +31,7 @@
     HOST=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
     sudo /usr/local/openvpn_as/scripts/sacli --key "host.name" --value $HOST ConfigPut
     sudo /usr/local/openvpn_as/scripts/sacli start
-    sudo echo "Update IP $HOST sucess" > /home/openvpnas/ChangeIP.log
+    sudo echo "Update IP $HOST sucess" >> /home/openvpnas/ChangeIP.log
 
     3. sudo chmod a+x /etc/rc.local
     4. sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/

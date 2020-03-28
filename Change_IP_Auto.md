@@ -9,6 +9,7 @@
        节省一步，在开机自动脚本中加入几行命令。
 #### 方案一：确定域名，云app更改DNS解析
 ## 解析分析
+    0. Hostname配置成域名的FQDN。
     1、AWS APP上，对EC2通过先stop再start后，更改IP地址，复制下来
     2、Aliyun APP上，域名解析服务，更改主机记录，将复制的IP贴进去。
     3、等待几秒钟后，直接启用openvpn client使用

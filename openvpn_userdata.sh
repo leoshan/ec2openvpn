@@ -10,9 +10,9 @@ echo -e "VPN username: openvpn,VPN password: ${admin_pw},VPN address:${INSTANCE}
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 #Openvpn 2.75 @ ubuntu 18.04 Auto change service IP address 
-sudo echo "[Install]" >>  /lib/systemd/system/rc.local.service
-sudo echo "WantedBy=multi-user.target" >>  /lib/systemd/system/rc.local.service
-sudo echo "Alias=rc-local.service" >>  /lib/systemd/system/rc.local.service
+sudo echo "[Install]" >> /lib/systemd/system/rc.local.service
+sudo echo "WantedBy=multi-user.target" >> /lib/systemd/system/rc.local.service
+sudo echo "Alias=rc-local.service" >> /lib/systemd/system/rc.local.service
 sudo echo "#!/bin/bash" >> /etc/rc.local
 sudo echo "sleep 30" >> /etc/rc.local
 sudo echo "HOST=`curl http://169.254.169.254/latest/meta-data/public-ipv4`" >> /etc/rc.local
